@@ -20,7 +20,7 @@ namespace TriangleSquareLib.Tests
             Assert.AreEqual(expected, actual, "Triangle square should have been {0}", expected);
         }
 
-        [ExpectedException(typeof(ArgumentOutOfRangeException), "Exception not thrown!")]
+        [ExpectedException(typeof(ArgumentOutOfRangeException), "Exception \"zero value\" not thrown!")]
         [TestMethod]
         public void ZeroValueCheck_ExceptionThrown()
         {
@@ -36,9 +36,9 @@ namespace TriangleSquareLib.Tests
             z.SquareCalc(0, B, C);
         }
 
-        [ExpectedException(typeof(ArgumentOutOfRangeException), "Exception not thrown!")]
+        [ExpectedException(typeof(ArgumentOutOfRangeException), "Exception \"inequality\" not thrown!")]
         [TestMethod]
-        public void TriangleInequalityCheck_ExceptionThrow()
+        public void TriangleInequalityCheck_ExceptionThrown()
         {
             TriangleSquare x = new TriangleSquare();
             x.SquareCalc(2, 3, 6);
