@@ -34,7 +34,14 @@ namespace TriangleSquareLib.Tests
             y.SquareCalc(A, 0, C);
             TriangleSquare z = new TriangleSquare();
             z.SquareCalc(0, B, C);
-            
+        }
+
+        [ExpectedException(typeof(ArgumentOutOfRangeException), "Exception not thrown!")]
+        [TestMethod]
+        public void TriangleInequalityCheck_ExceptionThrow()
+        {
+            TriangleSquare x = new TriangleSquare();
+            x.SquareCalc(2, 3, 6);
         }
     }
 }
